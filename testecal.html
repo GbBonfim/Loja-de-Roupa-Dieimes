@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculadora {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            margin-bottom: 10px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .botoes {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 10px;
+        }
+
+        .botoes input {
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .botoes input:hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculadora">
+        <input type="text" id="display" readonly>
+        <div class="botoes">
+            <input type="button" value="7" onclick="inserir('7')">
+            <input type="button" value="8" onclick="inserir('8')">
+            <input type="button" value="9" onclick="inserir('9')">
+            <input type="button" value="/" onclick="inserir('/')">
+
+            <input type="button" value="4" onclick="inserir('4')">
+            <input type="button" value="5" onclick="inserir('5')">
+            <input type="button" value="6" onclick="inserir('6')">
+            <input type="button" value="*" onclick="inserir('*')">
+
+            <input type="button" value="1" onclick="inserir('1')">
+            <input type="button" value="2" onclick="inserir('2')">
+            <input type="button" value="3" onclick="inserir('3')">
+            <input type="button" value="-" onclick="inserir('-')">
+
+            <input type="button" value="0" onclick="inserir('0')">
+            <input type="button" value="." onclick="inserir('.')">
+            <input type="button" value="=" onclick="calcular()">
+            <input type="button" value="+" onclick="inserir('+')">
+
+            <input type="button" value="C" onclick="limpar()" style="grid-column: span 4; background-color: #ff4d4d; color: white;">
+        </div>
+    </div>
+
+    <script>
+        function inserir(valor) {
+            document.getElementById('display').value += valor;
+        }
+
+        function calcular() {
+            try {
+                document.getElementById('display').value = eval(document.getElementById('display').value);
+            } catch {
+                document.getElementById('display').value = 'Erro';
+            }
+        }
+
+        function limpar() {
+            document.getElementById('display').value = '';
+        }
+    </script>
+
+</body>
+</html>

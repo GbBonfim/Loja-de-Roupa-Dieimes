@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparação Flex</title>
+  <style>
+    .container {
+      display: flex;
+      background: #eee;
+      border: 2px dashed #333;
+      padding: 10px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      background: #3498db;
+      color: white;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>space-around</h3>
+  <div class="container" style="justify-content: space-around;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <h3>space-evenly</h3>
+  <div class="container" style="justify-content: space-evenly;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+</body>
+</html>

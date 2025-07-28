@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de align-items</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+            /* Altere aqui para: flex-start, flex-end, stretch, baseline */
+            height: 200px;
+            border: 2px solid #000;
+            background-color: #f0f0f0;
+        }
+
+        .item {
+            background-color: #e67e22;
+            color: white;
+            padding: 10px;
+            width: 100px;
+            margin: 5px;
+            font-weight: bold;
+        }
+
+        .item:nth-child(2) {
+            height: 80px;
+        }
+
+        .item:nth-child(3) {
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Exemplo com align-items: center</h2>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+
+        <div class="item" style="font-size: 14px;">Item 1</div>
+        <div class="item" style="font-size: 24px;">Item 2</div>
+        <div class="item" style="font-size: 36px;">Item 3</div>
+
+    </div>
+
+</body>
+
+</html>
