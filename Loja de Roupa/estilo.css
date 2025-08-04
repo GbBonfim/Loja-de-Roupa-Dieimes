@@ -1,178 +1,148 @@
-h1 {
-    text-align: center;
-    color: #003366;
-    background-color: #e6f0fa;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-h2{
-    text-align: left; 
-    color: #12E013;
-}
-
-a{
-    color: rgb(10, 112, 247);
-    background-color: rgb(3, 45, 100);
-    font-size: 18px;
-    border-style: solid;
-
-}
-
-input{
-    text-align: left;
-    color: black;
-    background-color: #51A0E5;
-}
-
-body{
-    background-color: #f1f3f5;
-    
-}
-p{
-    font-size: 20px;
-}
-
-/* ID= identificador (cpf) # */
-/* class = Classe (Grupo em comun) . */
-
-
-.galeria {
-    display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    gap: 10px; /* espaço entre as imagens */
-    margin: 10px 0; /* espaço acima e abaixo da galeria */
-    flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
-}
-
-a {
-    color: #0a70f7;
-    background-color: #032d64;
-    font-size: 18px;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    border: none;
-    margin-bottom: 15px;
-    transition: background-color 0.3s ease;
-}
-
-h2 {
-    color: #032d64;
-    size: 0cap;
-}
-
+/* --- CONFIGURAÇÃO GLOBAL --- */
 body {
     background-color: #f1f3f5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- CABEÇALHO (LOGO) --- */
+h1 {
+    text-align: center;
+    color: #E01E23;
+    background-color: #eee;
+    padding: 20px 0;
     margin: 0;
 }
 
-.galeria img {
-    max-width: 100px;
-    width: 100%;
-    height: auto;
-    border-radius: 8px; /* deixa a borda mais suave*/   
-
+/* --- MENU HORIZONTAL --- */
+nav.Menu {
+    display: flex;
+    justify-content: center;
+    background-color: #032D64;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-a {
-    color: white;
-    background-color: rgb(3, 45, 100);
-    font-size: 18px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
+nav.Menu a {
+    color: #fff;
     text-decoration: none;
-    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav.Menu a:hover {
+    background-color: #0a70f7;
+}
+
+/* --- SEÇÃO DE PRODUTOS COM ESTILO DE CARD --- */
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.produto {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.produto img {
+    width: 90%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.produto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.produto p {
+    font-size: 14px;
+    color: #333;
     margin: 5px 0;
 }
 
-a:hover {
-    background-color: rgb(10, 112, 247  );
+.produto .preco {
+    color: #12E013;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-input[type="submit"],
-input[type="reset"] {
-    background-color: #51A0E5;
+.produto button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #034564;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #3b89cc;
+.produto button:hover {
+    background-color: #0569a7;
 }
 
-h1, h2, h3, h5 {
-    margin: 20px 0 10px;
-    font-weight: bold;
-
-}
-
-
-form {
-    max-width: 500px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-input[type="text"],
-input[type="number"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.rodape {
-    background-color: #222;
-    color: #eee;
+/* --- RODAPÉ --- */
+footer.rodape {
     text-align: center;
-    padding: 20px 10px;
-    font-size: 14px;
+    background-color: #032D64;
+    color: white;
+    padding: 20px 0;
     margin-top: 40px;
 }
 
-.rodape a {
-    color: #51A0E5;
+footer.rodape a {
+    color: #12E013;
     text-decoration: none;
     margin: 0 10px;
 }
 
-.rodape a:hover {
-    text-decoration: underline;
+/* --- FORMULÁRIOS (para contato, etc) --- */
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.menu {
-  display: flex;
-  justify-content: center; /* centraliza na horizontal */
-  gap: 20px; /* espaço entre os links */
-  background-color: #f0f0f0; /* opcional */
-  padding: 10px; /* opcional */
+form p {
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
-.menu a {
-  text-decoration: none;
-  color: rgb(10, 112, 247);
-  background-color: rgb(3, 45, 100);
-  font-size: 18px;
-  border: 1px solid rgb(10, 112, 247);
-  padding: 8px 12px;
-  border-radius: 5px;
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+form input[type="submit"], form input[type="reset"] {
+    width: auto;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #034564;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+    background-color: #0569a7;
 }
